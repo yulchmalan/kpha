@@ -22,9 +22,9 @@ searchBtn.addEventListener("click", () => {
 
     const currentHref = activeIcon.getAttribute("href");
 
-    if (currentHref.includes("search")) {
+    if (nav.classList.contains('openSearch')) {
         activeIcon.setAttribute("href", currentHref.replace("search", "close"));
-    } else if (currentHref.includes("close")) {
+    } else {
         activeIcon.setAttribute("href", currentHref.replace("close", "search"));
     }
 });
@@ -32,8 +32,15 @@ searchBtn.addEventListener("click", () => {
 
 
 burger.addEventListener('click', () => {
+    const isSmallScreen = window.innerWidth <= 1440; 
+    const activeIcon = isSmallScreen 
+        ? searchBtn.querySelector('.icon-sm use') 
+        : searchBtn.querySelector('.icon-md use');
+    const currentHref = activeIcon.getAttribute("href");
     nav.classList.remove('openSearch');
     navList.classList.toggle('nav-active');
+    activeIcon.setAttribute("href", currentHref.replace("close", "search"));
+    
 
     if (navList.classList.contains('nav-active')) {
         icon.setAttribute('href', 'images/icons.svg#close-24');
