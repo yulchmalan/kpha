@@ -19,6 +19,7 @@ header {
     padding: 18px 16px; 
     &.openSearch .search {
         opacity: 1;
+        pointer-events: all;
     }
     &.openSearch .nav-links {
         opacity: 0;
@@ -67,7 +68,9 @@ header {
         }
     }
     .search {
+        pointer-events: none;
         position: absolute;
+        z-index: 100;
         right: 50%;
         transform: translate(50%, 50%);
         width: 95%;
@@ -132,12 +135,12 @@ header {
         justify-content: center;
         align-items: center;
         display: flex;
+    } 
+    .icon-md {
+        display: none;
     }
 }
 
-.icon-md {
-    display: none;
-}
 
 @media screen and (min-width: 769px) {
     .nav {
@@ -168,6 +171,7 @@ header {
                 a {
                     padding: 12px 20px;
                     width: auto;
+                    pointer-events:all;
                 }
             }
         }
@@ -201,11 +205,12 @@ header {
                 }
             }
         }
+        .icon-md {
+            display: block;
+        }
+        .icon-sm {
+            display: none;
+        }
     }
-    .icon-md {
-        display: block;
-    }
-    .icon-sm {
-        display: none;
-    }
+    
 }

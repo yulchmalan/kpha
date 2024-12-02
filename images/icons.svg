@@ -26,4 +26,14 @@
     <symbol id="play" heigth="28" width="28">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 6.59479C5.75 4.93097 7.53383 3.87624 8.9917 4.67807L22.4557 12.0833C23.9668 12.9144 23.9668 15.0856 22.4557 15.9167L8.9917 23.3219C7.53383 24.1238 5.75 23.069 5.75 21.4052V6.59479Z" fill="currentColor"/>
     </symbol>
+    <symbol id="arrow-right-28">
+        <path d="M5.62476 15L24.3748 15M24.3748 15L15.9373 6.5625M24.3748 15L15.9373 23.4375" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="arrow-right-24">
+        <path d="M4.5 12L19.5 12M19.5 12L12.75 5.25M19.5 12L12.75 18.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="arrow-right-20">
+        <path d="M4.5498 10.5L17.0498 10.5M17.0498 10.5L11.4248 4.875M17.0498 10.5L11.4248 16.125" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>
+

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "./navbar";
 @import "./variables";
+@import "./swiper";
 
 * {
     box-sizing: border-box;
@@ -24,6 +25,13 @@ h1 {
     text-align: center;
     line-height: 150%;
     color: $white;
+}
+
+h2 {
+    font-size: 38px;
+    color: $white;
+    line-height: 150%;
+    font-weight: bold;
 }
 
 p {
@@ -69,10 +77,11 @@ p {
     > span {
         position: relative;
         &::before {
-            content: url(../images/play.svg);
+            content:"";
             display: block;
             width: 28px;
             height: 28px;
+            background: url(../images/icons-sprite.png) -10px -10px;
             position: absolute;
             left: -32px;
             top: 50%;
@@ -95,14 +104,14 @@ p {
     position: relative;
     padding-top: 400px;
     z-index: 1;
-    min-height: 90vh;
+    min-height: 640px;
     background: url(../images/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     &::after {
         content: "";
-        background: url(../images/abstract.png);
+        background: url(../images/abstract-sm.png);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -119,7 +128,6 @@ p {
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-        padding-bottom: 30px;
         .btn {
             margin-top: 30px;
         }
@@ -128,12 +136,26 @@ p {
             width: 100%;
         }
     }
+    margin-bottom: 100px;
+}
+
+.icon-md {
+    display: none;
+}
+
+.icon-lg {
+    display: none;
 }
 
 @media screen and (min-width:769px) { 
     .jumbotron {
         padding-top: 550px;
+        margin-bottom: 150px;
         &::after {
+            background: url(../images/abstract-md.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             top: 200px;
             width: 300px;
             height: 300px;
@@ -153,6 +175,12 @@ p {
     }
     .md-screen {
         display: inline;
+    }
+    .icon-md {
+        display: block;
+    }
+    .icon-sm {
+        display: none;
     }
 }
 
@@ -185,9 +213,11 @@ p {
 @media screen and (min-width:1900px) {
     .jumbotron {
         padding-top: 730px;
+        margin-bottom: 200px;
         &::after {
             width: 470px;
             height: 470px;
+            background: url(../images/abstract.png);
         }
         .content-wrapper {
             padding-bottom: 50px;
@@ -200,5 +230,11 @@ p {
                 max-width: 1096px;
             }
         }
+    }
+    .icon-lg {
+        display: block;
+    }
+    .icon-md {
+        display: none;
     }
 }
