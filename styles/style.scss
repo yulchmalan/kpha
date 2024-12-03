@@ -4,11 +4,21 @@
 @import "./swiper";
 @import "./devices";
 @import "./accordion";
+@import "./subscription";
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+input,
+textarea,
+button,
+select,
+a,
+.toggle {
+    -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -70,24 +80,32 @@ p {
 }
 
 .btn {
+    display: inline-block;
+    text-align: center;
     border-radius: 8px;
     padding: 14px 24px;
     transition: all linear .3s;
     user-select: none;
+    line-height: 150%;
     &:hover {
         filter: brightness(.9);
-        transform: translateY(-3px);
+        transform: translateY(-2px);
     }
     &:active {
-        transform: translateY(3px);
+        transform: translateY(2px);
     }
 }
 
 .btn-primary {
     background-color: $red-45;
     color: $white;
-    line-height: 150%;
     font-weight: 500;
+}
+
+.btn-secondary {
+    background-color: $black-06;
+    border: 1px solid $black-15;
+    color: $white;
 }
 
 .btn-icon {

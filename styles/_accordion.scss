@@ -17,34 +17,34 @@
         align-items: flex-end;
         justify-content: space-between;
         flex-wrap: wrap;
-        max-width: 90%;
         .btn {
             margin-top: 20px;
         }
     }
     .container {
-        
         column-gap: 40px;
         color: $white;
         counter-reset: item;
+        display: flex;
+        flex-direction: column;
+        column-gap: 40px;
         .accordion-item {
             flex: 1;
             margin: 0 auto;
-            min-height: 125px;
             position: relative;
-            max-width: 750px;
-            padding: 34px 34px 34px 116px;
+            width: 100%;
+            padding: 40px 10px;
             cursor: pointer;
             &::before {
                 position: absolute;
                 display: inline-block;
-                top: 34px;
-                left: 34px;
+                top: 44px;
+                left: 10px;
                 content: counter(item, decimal-leading-zero);
                 counter-increment: item;
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 500;
-                padding: 20px;
+                padding: 12px;
                 background-color: $black-12;
                 border: 1px solid $black-15;
                 border-radius: 10px;
@@ -62,12 +62,13 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-top: 0;
-                transition: all ease-in-out .5s;
+                min-height: 44px;
+                h3 {
+                    padding-left: 62px;
+                }
             }
             &:not(.active) .question {
-                margin-top: 17px;
-                transition: all ease-in-out .5s;
+                min-height: 44px;
             }
             .answer {
                 p {
@@ -95,11 +96,38 @@
 }
 
 @media screen and (min-width: 1024px) {
-    // .accordion-section {
-    //     .container {
-    //         column-count: 2;
-    //     }
-    // }
+    .accordion-section {
+        .container {
+            flex-direction: row;
+            .accordion-item {
+                margin: 0 auto;
+                position: relative;
+                max-width: 750px;
+                padding: 24px 24px 24px 90px;
+                &::before {
+                    top: 24px;
+                    left: 24px;
+                    padding: 16px;
+                }
+                .question {
+                    transition: all ease-in-out .5s;
+                    min-height: 30px;
+                    h3 {
+                        padding-left: 0;
+                    }
+                }
+                &:not(.active) .question {
+                    transition: all ease-in-out .5s;
+                    min-height: 54px;
+                }
+                .answer {
+                    p {
+                        padding-top: 14px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width:1541px) {
@@ -111,5 +139,28 @@
 }
 
 @media screen and (min-width:1900px) {
-
+    .accordion-section {
+        .container {
+            .accordion-item {
+                margin: 0 auto;
+                position: relative;
+                max-width: 750px;
+                padding: 34px 34px 34px 116px;
+                &::before {
+                    top: 34px;
+                    left: 34px;
+                    padding: 20px;
+                    font-size: 20px;
+                }
+                &:not(.active) .question {
+                    min-height: 67px;
+                }
+                .answer {
+                    p {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
 }

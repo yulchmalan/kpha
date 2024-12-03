@@ -1,0 +1,168 @@
+@import "./variables";
+
+#yearly {
+    display: none;
+}
+
+.toggle {
+    display: inline-flex;
+    background-color: $black-06;
+    border: 1px solid $black-15;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    .toggle-btn {
+        border-radius: 10px;
+        padding: 14px 24px;
+        line-height: 150%;
+        color: $grey-60;
+        transition: .1s all ease;
+        user-select: none;
+        &.active {
+            color: $white;
+            background-color: $black-12;
+            transition: .3s all ease-in;
+        }
+        &:not(.active) {
+            &:hover {
+                transition: .2s all ease;
+                filter: brightness(2);
+            }
+        }
+    }
+}
+
+.big-num {
+    color: $white;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 73%;
+}
+
+.subscription {
+    .text-content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .toggle {
+            margin-top: 20px;
+        }
+    }
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .card {
+        width: 100%;
+        min-width: 410px;
+        max-width: 650px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 10px;
+        background-color: $black-10;
+        border: 1px solid $black-15;
+        .text-content {
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .controls {
+        display: flex;
+        justify-content: space-around;
+        gap: 12px;
+        .btn {
+            width: calc(50% - 6px);
+            max-width: 250px;
+        }
+    }
+}
+
+.banner {
+    padding-left: 16px;
+    padding-right: 16px;
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 50px 30px;
+        border-radius: 12px;
+        background: $black-06 url(../images/banner-bg.png);
+        background-position: center;
+        background-size: cover;
+        border: 1px solid $black-15;
+        .text-content {
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width:769px) { 
+    .banner {
+        .content-wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+            .text-content {
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .subscription {
+        .container {
+            flex-direction: row;
+        }
+        .card {
+            max-width: calc(33% - 15px);
+            padding: 40px;
+            gap: 40px;
+        }
+    }
+    .banner {
+        .content-wrapper {
+            padding: 80px 60px;
+        }
+    }
+}
+
+@media screen and (min-width:1541px) {
+}
+
+@media screen and (min-width:1900px) {
+    .subscription {
+        .container {
+            gap:30px;
+        }
+        .card {
+            padding: 50px;
+            gap: 50px;
+            max-width: calc(33% - 20px);
+        }
+    }
+    .controls {
+        gap: 20px;
+        .btn {
+            width: calc(50% - 10px);
+        }
+    }
+    .banner {
+        padding: 0;
+        .content-wrapper {
+            padding: 80px 60px;
+        }
+    }
+}

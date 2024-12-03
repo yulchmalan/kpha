@@ -60,3 +60,62 @@ window.addEventListener('scroll', () => {
         }
     }
 });
+
+const accordionItems = document.querySelectorAll(".accordion-item");
+
+if (accordionItems) {
+    accordionItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            accordionItems.forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove("active");
+    
+                    const inactiveIcon = otherItem.querySelector('.icon use');
+                    if (inactiveIcon) {
+                        const inactiveHref = inactiveIcon.getAttribute("href");
+                        inactiveIcon.setAttribute("href", inactiveHref.replace("minus", "plus"));
+                    }
+                }
+            });
+            item.classList.toggle("active");
+    
+            const activeIcon = item.querySelector('.icon use');
+            if (activeIcon) {
+                const currentHref = activeIcon.getAttribute("href");
+                if (item.classList.contains("active")) {
+                    activeIcon.setAttribute("href", currentHref.replace("plus", "minus"));
+                } else {
+                    activeIcon.setAttribute("href", currentHref.replace("minus", "plus"));
+                }
+            }
+        });
+    });
+}
+
+const toggleSub = document.getElementById("toggleSub");
+
+if (toggleSub) {
+    const monthContainer = document.getElementById("monthy");
+    const yearContainer = document.getElementById("yearly");
+    const toggleBtns = toggleSub.querySelectorAll(".toggle-btn");
+    const toggleBtnMonthly = toggleSub.querySelector("#toggleMonthly");
+    const toggleBtnYearly = toggleSub.querySelector("#toggleYearly");
+
+    toggleSub.addEventListener("click", (e) => {
+        const clickedBtn = e.target;
+
+        if (clickedBtn === toggleBtnMonthly || clickedBtn === toggleBtnYearly) {
+            toggleBtns.forEach((btn) => btn.classList.remove("active"));
+            clickedBtn.classList.add("active");
+
+            if (clickedBtn === toggleBtnMonthly) {
+                monthContainer.style.display = "flex";
+                yearContainer.style.display = "none";
+            } else if (clickedBtn === toggleBtnYearly) {
+                monthContainer.style.display = "none";
+                yearContainer.style.display = "flex";
+            }
+        }
+    });
+}
+
