@@ -1,0 +1,115 @@
+@import "./variables";
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-10px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.accordion-section {
+    .text-content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 90%;
+        .btn {
+            margin-top: 20px;
+        }
+    }
+    .container {
+        
+        column-gap: 40px;
+        color: $white;
+        counter-reset: item;
+        .accordion-item {
+            flex: 1;
+            margin: 0 auto;
+            min-height: 125px;
+            position: relative;
+            max-width: 750px;
+            padding: 34px 34px 34px 116px;
+            cursor: pointer;
+            &::before {
+                position: absolute;
+                display: inline-block;
+                top: 34px;
+                left: 34px;
+                content: counter(item, decimal-leading-zero);
+                counter-increment: item;
+                font-size: 20px;
+                font-weight: 500;
+                padding: 20px;
+                background-color: $black-12;
+                border: 1px solid $black-15;
+                border-radius: 10px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                height: 1px;
+                bottom: 0;
+                left: 0; right: 0;
+                background: linear-gradient(90deg, rgba(229,0,0,0) 0%, rgba(229,0,0,1) 17%, rgba(229,0,0,0) 100%);;
+            }
+            .question {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 0;
+                transition: all ease-in-out .5s;
+            }
+            &:not(.active) .question {
+                margin-top: 17px;
+                transition: all ease-in-out .5s;
+            }
+            .answer {
+                p {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+.accordion-item.active .answer {
+    max-height: 300px;
+    transition: all 2s ease;
+    animation: fade 1s ease-in-out;
+}
+
+@media screen and (min-width:769px) { 
+
+}
+
+@media screen and (min-width: 1024px) {
+    // .accordion-section {
+    //     .container {
+    //         column-count: 2;
+    //     }
+    // }
+}
+
+@media screen and (min-width:1541px) {
+    .accordion-section {
+        .container {
+            column-gap: 80px;
+        }
+    }
+}
+
+@media screen and (min-width:1900px) {
+
+}

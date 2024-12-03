@@ -1,0 +1,165 @@
+@import "./variables";
+
+.devices {
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .card {
+        padding: 24px;
+        background: linear-gradient(221.52deg, rgba(229, 0, 0, 0.5) -208.03%, rgba(229, 0, 0, 0) 41.32%), #0F0F0F;
+        width: 100%;
+        max-width: 100%;
+        min-width: 250px;
+        border-radius: 12px;
+        border: 1px solid $black-15;
+        .caption {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.device-icon {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: $black-08;
+    border: 1px solid $black-12;
+    .icon-sm {
+        width: 24px; height: 24px;
+        background: url('../images/devices-sprite.png');
+    }
+    .icon-md {
+        width: 30px; height: 30px;
+        background: url('../images/devices-sprite.png');
+    }
+    .icon-lg {
+        width: 40px; height: 40px;
+        background: url('../images/devices-sprite.png');
+    }
+}
+
+#phone-icon {
+    .icon-sm {
+        background-position: -98px -180px;
+    }   
+    .icon-md {
+        background-position: -110px -130px;
+    }
+    .icon-lg {
+        background-position: -132px -70px;
+    }
+}
+
+#tablet-icon {
+    .icon-sm {
+        background-position: -142px -180px;
+    }   
+    .icon-md {
+        background-position: -192px -10px;
+    }
+    .icon-lg {
+        background-position: -71px -10px;;
+    }
+}
+
+#tv-icon {
+    .icon-sm {
+        background-position: -186px -180px;
+    }   
+    .icon-md {
+        background-position: -192px -60px;
+    }
+    .icon-lg {
+        background-position: -10px -70px;
+    }
+}
+
+#laptop-icon {
+    .icon-sm {
+        background-position: -54px -180px;
+    }   
+    .icon-md {
+        background-position: -60px -130px;
+    }
+    .icon-lg {
+        background-position: -132px -10px;
+    }
+}
+
+#console-icon {
+    .icon-sm {
+        background-position: -10px -180px;
+    }   
+    .icon-md {
+        background-position: -10px -130px;
+    }
+    .icon-lg {
+        background-position: -10px -10px;
+    }
+}
+
+#vr-icon {
+    .icon-sm {
+        background-position: -242px -10px;
+    }   
+    .icon-md {
+        background-position: -192px -110px;
+    }
+    .icon-lg {
+        background-position: -71px -70px;
+    }
+}
+
+@media screen and (min-width:769px) { 
+    .devices {
+        .container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap:30px;
+            .card {
+                max-width: calc(33% - 20px);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .devices {
+        .card {
+            padding: 40px;
+            .caption {
+                gap: 12px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .device-icon {
+        padding: 12px;
+    }
+}
+
+@media screen and (min-width:1541px) {
+
+}
+
+@media screen and (min-width:1900px) {
+    .devices {
+        .card {
+            padding: 50px;
+            .caption {
+                gap: 16px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .device-icon {
+        padding: 16px;
+    }
+}

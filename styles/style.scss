@@ -2,6 +2,8 @@
 @import "./navbar";
 @import "./variables";
 @import "./swiper";
+@import "./devices";
+@import "./accordion";
 
 * {
     box-sizing: border-box;
@@ -35,6 +37,9 @@ h2 {
 }
 
 h3 {
+    color: $white;
+    font-weight: 500;
+    line-height: 150%;
     font-size: 18px;
 }
 
@@ -54,6 +59,10 @@ p {
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
+}
+
+.content-wrapper:not(nav) {
+    margin-bottom: 50px;
 }
 
 .font-size {
@@ -101,7 +110,10 @@ p {
 
 .text-content {
     p {
-        margin-top: 10px;
+        margin-top: 8px;
+    }
+    &:not(:has(h1)) {
+        margin-bottom: 40px;
     }
 }
 
@@ -157,6 +169,9 @@ p {
 }
 
 @media screen and (min-width:769px) { 
+    .content-wrapper:not(nav) {
+        margin-bottom: 120px;
+    }    
     .jumbotron {
         padding-top: 550px;
         margin-bottom: 150px;
@@ -200,11 +215,22 @@ p {
     .icon-sm {
         display: none;
     }
+    .text-content {
+        p {
+            margin-top: 10px;
+        }
+        &:not(:has(h1)) {
+            margin-bottom: 60px;
+        }
+    }
 }
 
 @media screen and (min-width:1541px) {
     .content-wrapper {
         max-width: 1600px;
+        &:not(nav) {
+            margin-bottom: 150px;
+        }  
     }
     .font-size {
         font-size: 1.8rem;;
@@ -212,6 +238,9 @@ p {
     .text-content {
         p {
             margin-top: 14px;
+        }
+        &:not(:has(h1)) {
+            margin-bottom: 80px;
         }
     }
     h1 {
