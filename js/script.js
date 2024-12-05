@@ -79,14 +79,16 @@ if (accordionItems) {
             });
             item.classList.toggle("active");
     
-            const activeIcon = item.querySelector('.icon use');
+            const activeIcon = item.querySelectorAll('.icon use');
             if (activeIcon) {
-                const currentHref = activeIcon.getAttribute("href");
-                if (item.classList.contains("active")) {
-                    activeIcon.setAttribute("href", currentHref.replace("plus", "minus"));
-                } else {
-                    activeIcon.setAttribute("href", currentHref.replace("minus", "plus"));
-                }
+                activeIcon.forEach((icon) => {
+                    const currentHref = icon.getAttribute("href");
+                    if (item.classList.contains("active")) {
+                        icon.setAttribute("href", currentHref.replace("plus", "minus"));
+                    } else {
+                        icon.setAttribute("href", currentHref.replace("minus", "plus"));
+                    }
+                })
             }
         });
     });
@@ -95,11 +97,16 @@ if (accordionItems) {
 const toggleSub = document.getElementById("toggleSub");
 
 if (toggleSub) {
-    const monthContainer = document.getElementById("monthy");
-    const yearContainer = document.getElementById("yearly");
+    const prices = [
+        { monthly: "$9.99", yearly: "$99.99" },
+        { monthly: "$12.99", yearly: "$119.99" },
+        { monthly: "$14.99", yearly: "$149.99" },
+    ];
+
+    const pricingContainer = document.getElementById("pricingContainer");
     const toggleBtns = toggleSub.querySelectorAll(".toggle-btn");
-    const toggleBtnMonthly = toggleSub.querySelector("#toggleMonthly");
-    const toggleBtnYearly = toggleSub.querySelector("#toggleYearly");
+    const toggleBtnMonthly = document.getElementById("toggleMonthly");
+    const toggleBtnYearly = document.getElementById("toggleYearly");
 
     toggleSub.addEventListener("click", (e) => {
         const clickedBtn = e.target;
@@ -108,14 +115,22 @@ if (toggleSub) {
             toggleBtns.forEach((btn) => btn.classList.remove("active"));
             clickedBtn.classList.add("active");
 
-            if (clickedBtn === toggleBtnMonthly) {
-                monthContainer.style.display = "flex";
-                yearContainer.style.display = "none";
-            } else if (clickedBtn === toggleBtnYearly) {
-                monthContainer.style.display = "none";
-                yearContainer.style.display = "flex";
-            }
+            const isMonthly = clickedBtn === toggleBtnMonthly;
+
+            const cards = pricingContainer.querySelectorAll(".card");
+            cards.forEach((card, index) => {
+                const priceElement = card.querySelector(".big-num");
+                const durationElement = card.querySelector(".duration");
+
+                if (priceElement && durationElement) {
+                    priceElement.textContent = isMonthly
+                        ? prices[index].monthly
+                        : prices[index].yearly;
+                    durationElement.textContent = isMonthly ? "/month" : "/year";
+                }
+            });
         }
     });
 }
+
 

@@ -63,8 +63,12 @@
                 justify-content: space-between;
                 align-items: center;
                 min-height: 44px;
+                overflow-x: visible;
                 h3 {
                     padding-left: 62px;
+                }
+                svg {
+                    min-width: 24px;
                 }
             }
             &:not(.active) .question {
@@ -123,6 +127,20 @@
                 .answer {
                     p {
                         padding-top: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:769px) { 
+    .accordion-section {
+        .container {
+            .accordion-item {
+                .question {
+                    h3 {
+                        max-width: none;
                     }
                 }
             }

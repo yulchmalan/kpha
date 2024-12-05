@@ -5,6 +5,7 @@
 @import "./devices";
 @import "./accordion";
 @import "./subscription";
+@import "./footer";
 
 * {
     box-sizing: border-box;
@@ -16,7 +17,6 @@ input,
 textarea,
 button,
 select,
-a,
 .toggle {
     -webkit-tap-highlight-color: transparent;
 }
@@ -57,6 +57,12 @@ h4 {
     line-height: 150%;
     font-size: 14px;
 }
+
+h5 {
+    line-height: 150%;
+    font-size: 16px;
+}
+
 
 p {
     line-height: 150%;
@@ -224,6 +230,9 @@ p {
     h4 {
         font-size: 16px;
     }
+    h4 {
+        font-size: 18px;
+    }
     .md-screen {
         display: inline;
     }
@@ -272,6 +281,9 @@ p {
     }
     h4 {
         font-size: 18px;
+    }
+    h5 {
+        font-size: 20px;
     }
     p {
         max-width: 1096px;

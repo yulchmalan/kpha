@@ -1,9 +1,5 @@
 @import "./variables";
 
-#yearly {
-    display: none;
-}
-
 .toggle {
     display: inline-flex;
     background-color: $black-06;
@@ -53,18 +49,17 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 20px;
     }
     .card {
         width: 100%;
-        min-width: 410px;
         max-width: 650px;
         padding: 24px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 30px;
         border-radius: 10px;
         background-color: $black-10;
@@ -82,7 +77,7 @@
         gap: 12px;
         .btn {
             width: calc(50% - 6px);
-            max-width: 250px;
+            max-width: 250px; 
         }
     }
 }
@@ -125,9 +120,10 @@
     .subscription {
         .container {
             flex-direction: row;
+            align-items: stretch;
         }
         .card {
-            max-width: calc(33% - 15px);
+            width: calc(33% - 27px);
             padding: 40px;
             gap: 40px;
         }
