@@ -7,6 +7,10 @@
 @import "./subscription";
 @import "./footer";
 
+.vh {
+    min-height: 100vh;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -48,7 +52,7 @@ h2 {
 
 h3 {
     color: $white;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 150%;
     font-size: 18px;
 }
@@ -105,7 +109,7 @@ p {
 .btn-primary {
     background-color: $red-45;
     color: $white;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .btn-secondary {
@@ -123,7 +127,7 @@ p {
             display: block;
             width: 28px;
             height: 28px;
-            background: url(../images/icons-sprite.png) -10px -10px;
+            background: url(../images/icons-sprite.png) -10px -58px;
             position: absolute;
             left: -32px;
             top: 50%;
@@ -252,6 +256,12 @@ p {
     }
 }
 
+@media screen and (min-width:1024px) {
+    .full-height {
+        padding-bottom: 415px;
+    }    
+}
+
 @media screen and (min-width:1541px) {
     .content-wrapper {
         max-width: 1600px;
@@ -294,6 +304,9 @@ p {
     .btn-icon {
         padding-left: 56px;
     }
+    .full-height {
+        padding-bottom: 500px;
+    }    
 }
 
 @media screen and (min-width:1900px) {

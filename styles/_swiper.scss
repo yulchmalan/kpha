@@ -27,13 +27,83 @@
     --swiper-scrollbar-size: 5px;
 }
 
+.highlight {
+    color: $grey-75;
+}
+
+.sm-btn {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    width: 44px; height: 44px;
+    border-radius: 8px;
+    transition: .3s all ease;
+    &:hover {
+        filter: brightness(.8);
+    }
+    &:active {
+        filter: brightness(1.1);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px; height: 24px;
+        display: block;
+        background: url('../images/icons-sprite.png');
+    }
+}
+.sm-btn-light {
+    background-color: $black-10;
+    border: 1px solid $black-12;
+}
+.sm-btn-dark {
+    background-color: $black-06;
+    border: 1px solid $black-15;
+}
+
+.add-btn::after {
+    background-position: -10px -106px;
+}
+
+.like-btn::after {
+    background-position: -156px -10px;
+}
+
+.sound-btn::after {
+    background-position: -156px -54px;
+}
+
 .swiper-section {
     .content-wrapper {
         padding-right: 0;
     }
 }
 
-.swiper {
+.swiper,
+.swiperFour {
+    .controls {
+        position: absolute;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px;
+        background-color: $black-06;
+        border: 1px solid $black-12;
+        border-radius: 12px;
+    }
+}
+
+.swiper,
+.swiper-jumbo,
+.swiperFour {
+    overflow-x: hidden;
     .swiper-wrapper {
         margin-bottom: 30px;
         display: flex;
@@ -41,7 +111,6 @@
     }
     .swiper-top {
         width: 100%;
-        min-height: 100px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -49,75 +118,94 @@
         .text-content {
             padding-right: 16px;
         }
-        .controls {
-            position: absolute;
-            display: none;
+    }
+    .swiper-button-prev {
+        position: relative;
+        margin-top: 0;
+        &::after {
+            background-position: -54px -106px;
+        }
+    }
+    .swiper-button-next {
+        margin-top: 0;
+        position: relative;
+        &::after {
+            background-position: -98px -106px;
+        }
+    }
+    .container-pagination {
+        width: 83px;
+    }
+    .swiper-pagination {
+        position: relative;
+        width: 100% !important;
+        
+        .swiper-pagination-bullet {
+            width: 16px;
+            border-radius: 100px;
+            transform: scale(1) !important;
+            transition: all .8s ease;
+        }
+        .swiper-pagination-bullet-active {
+            width: 23px;
+            transform: scale(1) !important;
+        }
+    }
+    .solo-card {
+        max-width: 295px;
+        .image-wrapper {
+            aspect-ratio: 22 / 25;
+        }
+    }
+    .lg-card {
+        .image-wrapper {
+            aspect-ratio: 20 / 25;
+        }
+    }
+    .solo-card,
+    .lg-card {
+        height: 100%;
+        font-weight: 500;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        padding: 12px;
+        background-color: $black-10;
+        border-radius: 12px;
+        border: 1px solid $black-15;
+        .caption {
+            font-size: 12px;
+            margin-top: 12px;
+            color: $grey-60;
+            display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 16px;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 16px;
-            background-color: $black-06;
-            border: 1px solid $black-12;
-            border-radius: 12px;
-            .swiper-button-prev {
-                position: relative;
-                padding: 10px;
-                width: 44px; height: 44px;
-                background-color: $black-10;
-                border: 1px solid $black-12;
-                border-radius: 8px;
-                margin-top: 0;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 24px; height: 24px;
-                    display: block;
-                    background: url('../images/icons-sprite.png') -58px -58px;
-                }
+            > div:not(.full-width-caption) {
+                display: flex;
+                gap: 4px;
+                padding: 4px 8px 4px 4px;
+                align-items: center;
+                background-color: $black-08;
+                border: $black-15 1px solid;
+                border-radius: 51px;
             }
-            .swiper-button-next {
-                margin-top: 0;
-                position: relative;
-                padding: 10px;
-                width: 44px; height: 44px;
-                background-color: $black-10;
-                border: 1px solid $black-12;
-                border-radius: 8px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 24px; height: 24px;
-                    display: block;
-                    background: url('../images/icons-sprite.png');
-                    background-position: -107px -10px;
-                }
+            .full-width-caption {
+                text-align: center;
+                margin: 0 auto;
+                background-color: $black-08;
+                border: $black-15 1px solid;
+                border-radius: 51px;
+                min-width: 167px;
+                padding: 6px 14px;
             }
-            .container-pagination {
-                width: 83px;
-            }
-            .swiper-pagination {
-                position: relative;
-                width: 100% !important;
-                
-                .swiper-pagination-bullet {
-                    width: 16px;
-                    border-radius: 100px;
-                    transform: scale(1) !important;
-                    transition: all .8s ease;
-                }
-                .swiper-pagination-bullet-active {
-                    width: 23px;
-                    transform: scale(1) !important;
-                }
+        }
+        .image-wrapper {
+            overflow: hidden;
+            border-radius: 10px;
+            img {
+                border-radius: 10px;
+                width: 100%;
             }
         }
     }
@@ -128,13 +216,13 @@
             color: inherit;
         }
         max-width: 295px;
-        padding: 30px;
+        padding: 20px;
         background-color: $black-10;
         border-radius: 12px;
         border: 1px solid $black-15;
         .caption {
             font-size: 18px;
-            font-weight: 500;
+            font-weight: 600;
             color: $white;
             display: flex;
             justify-content: space-between;
@@ -164,15 +252,179 @@
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
-                    border-radius: 10px;
+                    border-radius: 6px;
                 }
+            }
+        }
+    }
+    .card-tag {
+        .container {
+            aspect-ratio: 12 / 10;
+        }
+    }
+}
+
+.swiper-jumbotron {
+    padding-top: 122px;
+    margin-bottom: 80px;
+    .swiper-jumbo {
+        position: relative;
+        overflow-x: hidden;
+        .swiper-slide {
+            position: relative;
+            aspect-ratio: 17 / 25;
+            max-height: 80vh;
+            border-radius: 12px;
+            z-index: 1;
+            overflow: hidden;
+            text-align: center;
+            padding: 16px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 20px;
+            p {
+                display: none;
+            }
+            > *:not(.image-wrapper) {
+                max-width: 75%;
+                margin: 0 auto;
+            }
+            .container {
+                width: auto;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 8px;
+                .btn {
+                    width: 100%;
+                }
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: -1px; bottom: -1px;
+                left: -1px; right: -1px;
+                z-index: -2;
+                border-radius: 12px;
+                background: linear-gradient(180deg, rgba(38,38,38,1) 0%, rgba(38,38,38,0) 100%);
+            }
+            &:nth-child(1) {
+                .image-wrapper {
+                    background-image: url(../images/posters/swiper-1.jpg);
+                    background-position: center;
+                }
+            }
+            &:nth-child(2) {
+                .image-wrapper {
+                    background-image: url(../images/posters/swiper-2.jpg);
+                    background-position: top;
+                }
+            }
+            &:nth-child(3) {
+                .image-wrapper {
+                    background-image: url(../images/posters/swiper-3.jpg);
+                    background-position: top 0 right 0;
+                }
+            }
+            &:nth-child(4) {
+                .image-wrapper {
+                    background-image: url(../images/posters/swiper-4.jpg);
+                    background-position: center;
+                }
+            }
+            .image-wrapper {
+                position: absolute;
+                overflow: hidden;
+                top: 1px; bottom: 1px;
+                left: 1px; right: 1px;
+                width: calc(100% - 2px);
+                z-index: -1;
+                background-repeat: no-repeat;
+                background-size: 300%;
+                border-radius: 12px;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0; bottom: 0;
+                    right: 0; left: 0;
+                    background: linear-gradient(180deg, #14141400, #141414);
+                    border-radius: 12px;
+                }
+            }
+        }
+        .controls {
+            position: absolute;
+            display: none;
+            bottom: 100px;
+            left: 50px; right: 50px;
+            z-index: 10;
+            .container-pagination {
+                position: absolute;
+                left: 50%; top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .swiper-button-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+            .swiper-button-prev {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
             }
         }
     }
 }
 
+.card {
+    .tag {
+        margin-bottom: 4px;
+    }
+}
+
+.tag {
+    text-transform: capitalize;
+    color: $white;
+    background-color: $red-45;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 600;
+}
+
+.tag-section {
+    position: relative;
+    margin-bottom: 80px;
+    border-radius: 12px;
+    .swiper,
+    .swiperFour {
+        .swiper-top {
+            margin-bottom: 20px;
+        }
+    }
+    > .tag {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        transform: translateY(-50%);
+        padding: 10px 24px;
+        display: none;
+    }
+    .swiper-section:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
 @media screen and (min-width:769px) { 
-    .swiper {
+    .swiper,
+    .swiperFour {
         .swiper-scrollbar {
             display: none;
         }
@@ -185,8 +437,33 @@
 }
 
 @media screen and (min-width: 1024px) {
-    .swiper {
+    .swiper,
+    .swiperFour {
+        .solo-card {
+            padding: 16px;
+            .caption {
+                font-size: 14px;
+                margin-top: 16px;
+            }
+            .image-wrapper {
+                border-radius: 12px;
+                img {
+                    border-radius: 12px;
+                }
+            }
+        }
+        .card {
+            padding: 24px;
+            .container {
+                .item {
+                    img {
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
         .swiper-top {
+            min-height: 100px;
             padding-right: 260px;
             margin-bottom: 60px;
             .controls {
@@ -194,33 +471,167 @@
             }
         }
     }
+    .swiper-jumbotron {
+        padding-top: 140px;
+        margin-bottom: 100px;
+        .swiper-jumbo {
+            .swiper-slide {
+                max-height: none;
+                aspect-ratio: 10 / 5.3;
+                z-index: 1;
+                padding-bottom: 104px;
+                gap: 2px;
+                p {
+                    display: block;
+                }
+                .container {
+                    gap: 8px;
+                    margin-top: 22px;
+                    .btn {
+                        width: auto;
+                        margin-right: 12px;
+                    }
+                }
+                &:nth-child(1) {
+                    .image-wrapper {
+                        background-position: center;
+                    }
+                }
+                &:nth-child(2) {
+                    .image-wrapper {
+                        background-position: top;
+                    }
+                }
+                &:nth-child(3) {
+                    .image-wrapper {
+                        background-position: top;
+                    }
+                }
+                &:nth-child(4) {
+                    .image-wrapper {
+                        background-position: 0% 30%;
+                    }
+                }
+                .image-wrapper {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+            }
+            .controls {
+                display: block;
+            }
+        }
+    }
+    .tag-section {
+        margin-bottom: 120px;
+        border: 1px solid $black-15;
+        &.content-wrapper {
+            padding: 40px;
+        }
+        > .tag {
+            display: block;
+        }
+        .swiper,
+        .swiperFour {
+            .swiper-top {
+                margin-bottom: 40px;
+            }
+        }
+        .swiper-section:not(:last-child) {
+            margin-bottom: 80px;
+        }
+    }
 }
 
 @media screen and (min-width:1900px) {
-    .swiper {
-        .swiper-top {
-            margin-bottom: 80px;
-            .controls {
-                .swiper-button-prev {
-                    padding: 14px;
-                    width: 56px; height: 56px;
-                    &::after {
-                        width: 28px; height: 28px;
-                        display: block;
-                        background: url('../images/icons-sprite.png') -59px -10px;
-                    }
+    .swiper-jumbotron {
+        padding-top: 170px;
+    }
+    .sm-btn {
+        padding: 14px;
+        width: 56px; height: 56px;
+        &::after {
+            width: 28px; height: 28px;
+        }
+    }
+    .add-btn::after {
+        background-position: -10px -10px;
+    }
+    .like-btn::after {
+        background-position: -59px -10px;
+    }
+    .sound-btn::after {
+        background-position: -59px -58px;
+    }
+    .swiper,
+    .swiperFour {
+        .solo-card {
+            padding: 20px;
+            .caption {
+                font-size: 16px;
+                margin-top: 20px;
+                > div:not(.full-width-caption) {
+                    gap: 2px;
+                    padding: 6px 10px 6px 6px;               
                 }
-                .swiper-button-next {
-                    padding: 14px;
-                    width: 56px; height: 56px;
-                    &::after {
-                        width: 28px; height: 28px;
-                        display: block;
-                        background: url('../images/icons-sprite.png');
-                        background-position: -10px -58px;
-                    }
+                .full-width-caption {
+                    width: 100%;
+                    padding: 6px;
                 }
             }
+        }
+        .card {
+            padding: 24px;
+        }
+        .swiper-top {
+            margin-bottom: 80px;
+        }
+        .controls {
+            .swiper-button-prev {
+                &::after {
+                    background-position: -108px -10px;
+                }
+            }
+            .swiper-button-next {
+                &::after {
+                    background-position:-98px -106px;
+                }
+            }
+        }
+    }
+    .swiper-jumbotron {
+        margin-bottom: 180px;
+        .swiper-jumbo {
+            .swiper-slide {
+                padding-bottom: 126px;
+                gap: 4px;
+                .container {
+                    margin-top: 26px;
+                }
+            }
+        }
+    }
+    .tag {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .tag-section {
+        margin-bottom: 150px;
+        &.content-wrapper {
+            padding: 50px;
+        }
+        > .tag {
+            padding: 8px 20px;
+            left: 40px;
+        }
+        .swiper,
+        .swiperFour {
+            .swiper-top {
+                margin-bottom: 50px;
+            }
+        }
+        .swiper-section:not(:last-child) {
+            margin-bottom: 100px;
         }
     }
 }

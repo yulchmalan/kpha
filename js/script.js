@@ -67,32 +67,34 @@ if (accordionItems) {
     accordionItems.forEach((item) => {
         item.addEventListener("click", () => {
             accordionItems.forEach((otherItem) => {
+                const icon = otherItem.querySelectorAll('.icon use');
                 if (otherItem !== item) {
                     otherItem.classList.remove("active");
-    
-                    const inactiveIcon = otherItem.querySelector('.icon use');
-                    if (inactiveIcon) {
-                        const inactiveHref = inactiveIcon.getAttribute("href");
-                        inactiveIcon.setAttribute("href", inactiveHref.replace("minus", "plus"));
+                    if (icon) {
+                        icon.forEach((inactiveIcon) => {
+                            const href = inactiveIcon.getAttribute("href");
+                            inactiveIcon.setAttribute("href", href.replace("minus", "plus"));
+                        });
                     }
                 }
             });
             item.classList.toggle("active");
-    
+
             const activeIcon = item.querySelectorAll('.icon use');
             if (activeIcon) {
                 activeIcon.forEach((icon) => {
-                    const currentHref = icon.getAttribute("href");
+                    const href = icon.getAttribute("href");
                     if (item.classList.contains("active")) {
-                        icon.setAttribute("href", currentHref.replace("plus", "minus"));
+                        icon.setAttribute("href", href.replace("plus", "minus"));
                     } else {
-                        icon.setAttribute("href", currentHref.replace("minus", "plus"));
+                        icon.setAttribute("href", href.replace("minus", "plus"));
                     }
-                })
+                });
             }
         });
     });
 }
+
 
 const toggleSub = document.getElementById("toggleSub");
 
@@ -132,5 +134,3 @@ if (toggleSub) {
         }
     });
 }
-
-
