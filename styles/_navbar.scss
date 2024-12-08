@@ -67,6 +67,7 @@ header {
             width: 100%;
             text-align: center;
             pointer-events: none;
+            -webkit-tap-highlight-color: transparent;
             &.active {
                 background-color: $black-10;
                 color: $white;

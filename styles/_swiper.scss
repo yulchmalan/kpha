@@ -65,21 +65,25 @@
 }
 
 .add-btn::after {
-    background-position: -10px -106px;
+    background-position: -54px -106px;
 }
 
 .like-btn::after {
-    background-position: -156px -10px;
+    background-position: -156px -54px;
 }
 
 .sound-btn::after {
-    background-position: -156px -54px;
+    background-position: -156px -98px;
 }
 
 .swiper-section {
     .content-wrapper {
         padding-right: 0;
     }
+}
+
+.tag-section.content-wrapper {
+    padding-right: 0;
 }
 
 .swiper,
@@ -123,14 +127,14 @@
         position: relative;
         margin-top: 0;
         &::after {
-            background-position: -54px -106px;
+            background-position: -98px -106px;
         }
     }
     .swiper-button-next {
         margin-top: 0;
         position: relative;
         &::after {
-            background-position: -98px -106px;
+            background-position: -156px -10px;
         }
     }
     .container-pagination {
@@ -594,7 +598,7 @@
             }
             .swiper-button-next {
                 &::after {
-                    background-position:-98px -106px;
+                    background-position: -108px -58px;
                 }
             }
         }

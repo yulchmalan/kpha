@@ -1,0 +1,307 @@
+@import "./variables";
+
+.form-section {
+    padding-top: 140px;
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        row-gap: 40px;
+        column-gap: 80px;
+        grid-template-areas: 
+            'caption'
+            'decor'
+            'form';
+        .text-content {
+            grid-area: caption;
+        }
+        .form {
+            grid-area: form;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            gap: 20px;
+            background-color: $black-06;
+            border: 1px solid $black-15;
+            border-radius: 12px;
+            .btn {
+                width: 100%;
+            }
+        }
+        .form-decor {
+            grid-area: decor;
+            background-image: url(../images/form-decor.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border: 6px solid $black-15;
+            border-radius: 12px;
+            height: 344px;
+        }
+    }
+}
+
+input {
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    &:not([type="submit"]){
+        padding: 20px;
+        border-radius: 6px;
+        border: 1px solid $black-15;
+        background-color: $black-08;
+        color: $grey-60;
+    }
+    &[type="submit"] {
+        font-weight: 400;
+    }
+    &[type="checkbox"] {
+        display: none;
+    }
+}
+
+textarea {
+    outline: none;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid $black-15;
+    background-color: $black-08;
+    color: $grey-60;
+    font-family: "Manrope", "Poppins", sans-serif;
+    font-size: 18px;
+    resize: none;
+}
+
+label {
+    line-height: 150%;
+    font-size: 16px;
+
+    &:not([for="terms"]) {
+        font-weight: 500;
+        color: $white;
+    }
+    &[for="terms"] {
+        color: $grey-60;
+        position: relative;
+        margin-left: 38px;
+        user-select: none;
+        &::before {
+            content: " ";
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -38px;
+            width: 28px;
+            height: 28px;
+            border: 1px solid $black-15;
+            border-radius: 4px;
+            line-height: 28px;
+            text-align: center;
+            font-size: 40px;
+        }
+    }
+}
+
+input[type="checkbox"]:checked ~ label[for="terms"]::before {
+    content: "\00d7";
+}
+
+.input-group {
+    position: relative;
+    &:not(.terms) {
+        flex-direction: column;
+    }
+    display: flex;
+    gap: 12px;
+    &:not(.message) {
+        width: 100%;
+    }
+    &.message {
+        width: 100%;
+    }
+}
+
+.flag {
+    background: url(../images/flags.png);
+    display: inline-block;
+    width: 40px; height: 30px;
+    border-radius: 2px;
+}
+
+.flag-uk {
+    background-position: -80px -0;
+}
+
+.flag-ua {
+    background-position: -80px -30px;
+}
+
+.flag-fr {
+    background-position: -0 -30px;
+}
+
+.flag-pl {
+    background-position: -40px -30px;
+}
+
+.flag-us {
+    background-position: -0 -60px;
+}
+
+.flag-ca {
+    background-position:  -0 -0;
+}
+
+.flag-cz {
+    background-position: -40px -0;
+}
+
+.select-box {
+    position: relative;
+    input {
+        width: 100%;
+    }
+    .options {
+        position: absolute;
+        top: 75px;
+        width: 100%;
+        background-color: $black-08;
+        z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+        transition: all ease-in-out .4s;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    ol {
+        list-style: none;
+        max-height: 225px;
+        overflow-y: scroll;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid $black-15;
+        border-top: none;
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+        &::-webkit-scrollbar-thumb {
+            width: 8px;
+            height: 20px;
+            background-color: $black-15;
+            border-radius: 4px;
+        }
+        li {
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            &:hover {
+                background-color: $black-15;
+            }
+            > div {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                color: $grey-60;
+            }
+        }
+    }
+}
+
+.selected-option {
+    display: flex;
+    gap: 16px;
+    .selected-flag {
+        position: relative;
+        padding: 12px 42px 12px 12px;
+        display: flex;
+        align-items: center;
+        border-radius: 6px;
+        border: 1px solid $black-15;
+        background-color: $black-08;
+        cursor: pointer;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px; height: 20px;
+            background: url(../images/icons-sprite.png);
+            background-position: -10px -151px;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+@media screen and (min-width:769px) { 
+
+}
+
+@media screen and (min-width: 1324px) {
+    .form-section {
+        padding-top: 200px;
+        .content-wrapper {
+            grid-template-columns: 1fr 1.8fr;
+            grid-template-rows: auto 1fr;
+            row-gap: 40px;
+            column-gap: 50px;
+            grid-template-areas: 
+                'caption form'
+                'decor form';
+            .form {
+                padding: 40px;
+                row-gap: 40px;
+                column-gap: 20px;
+                .btn {
+                    width: auto;
+                }
+            }
+            .form-decor {
+                height: 100%;
+            }
+        }
+    }
+    .input-group {
+        &:not(.message) {
+            width: calc(50% - 25px);
+        }
+    }
+}
+
+@media screen and (min-width:1541px) {
+    .selected-option {
+        gap: 16px;
+        .selected-flag {
+            &::after {
+                width: 24px; height: 24px;
+                background-position: -10px -106px;
+                right: 12px;
+            }
+        }
+    }
+    label {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:1900px) {
+    .form-section {
+        padding-top: 235px;
+        .content-wrapper {
+            row-gap: 50px;
+            column-gap: 80px;
+            .form {
+                padding: 50px;
+                gap: 50px;
+            }
+        }
+    }
+    .input-group {
+        gap: 16px;
+    }
+}

@@ -5,6 +5,7 @@
 @import "./devices";
 @import "./accordion";
 @import "./subscription";
+@import "./form";
 @import "./footer";
 
 .vh {
@@ -36,12 +37,21 @@ body {
 }
 
 h1 {
-    font-size: 28px;
     font-weight: bold;
-    text-align: center;
     line-height: 150%;
     color: $white;
+    &.h1-48,
+    &.h1-58 {
+        font-size: 28px;
+    }
+    &.h1-38 {
+        font-size: 24px;
+    }
+    &.h1-58 {
+        text-align: center;
+    }
 }
+
 
 h2 {
     font-size: 20px;
@@ -223,7 +233,15 @@ p {
         }
     }
     h1 {
-        font-size: 48px;
+        &.h1-38 {
+            font-size: 30px;
+        }
+        &.h1-48 {
+            font-size: 38px;
+        }
+        &.h1-58 {
+            font-size: 48px;
+        }
     }
     h2 {
         font-size: 28px;
@@ -281,7 +299,15 @@ p {
         }
     }
     h1 {
-        font-size: 58px;
+        &.h1-38 {
+            font-size: 38px;
+        }
+        &.h1-48 {
+            font-size: 48px;
+        }
+        &.h1-58 {
+            font-size: 58px;
+        }
     }
     h2 {
         font-size: 38px;
