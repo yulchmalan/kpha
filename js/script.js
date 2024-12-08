@@ -134,3 +134,33 @@ if (toggleSub) {
         }
     });
 }
+
+document.addEventListener("click", (event) => {
+    if (!searchBtn.contains(event.target) && !nav.contains(event.target)) {
+        nav.classList.remove('openSearch');
+        const isSmallScreen = window.innerWidth <= 1440; 
+        const activeIcon = isSmallScreen 
+            ? searchBtn.querySelector('.icon-sm use') 
+            : searchBtn.querySelector('.icon-md use');
+        const currentHref = activeIcon.getAttribute("href");
+        activeIcon.setAttribute("href", currentHref.replace("close", "search"));
+    }
+
+    if (!burger.contains(event.target) && !navList.contains(event.target)) {
+        navList.classList.remove('nav-active');
+        icon.setAttribute('href', 'images/icons.svg#burger');
+    }
+
+    accordionItems.forEach((item) => {
+        if (!item.contains(event.target)) {
+            item.classList.remove("active");
+            const icons = item.querySelectorAll('.icon use');
+            if (icons) {
+                icons.forEach((icon) => {
+                    const href = icon.getAttribute("href");
+                    icon.setAttribute("href", href.replace("minus", "plus"));
+                });
+            }
+        }
+    });
+});

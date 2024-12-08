@@ -9,6 +9,11 @@
         content="Main page of streaming service StreamVibe">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css"
+    />
     <link rel = "icon" type = "image/png" href = "/images/logo-min.png?">
     <title>StreamVibe</title>
 </head>
@@ -20,9 +25,9 @@
             </a>
             <div class="nav-center">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="font-size active">Home</a></li>
+                    <li><a href="index.html" class="font-size">Home</a></li>
                     <li><a href="moviesAndShows.html" class="font-size">Movies & Shows</a></li>
-                    <li><a href="support.html" class="font-size">Support</a></li>
+                    <li><a href="support.html" class="font-size active">Support</a></li>
                     <li><a href="subscription.html" class="font-size">Subscription</a></li>
                 </ul>
                 <form action="#" method="get" class="search">
@@ -66,6 +71,55 @@
         </nav>
     </header>
     <main >
+        <section id="form" class="form-section">
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <h1 class="h1-48">Welcome to our support page!</h1>
+                    <p class="font-size">We're here to help you with any problems you may be having with our product.</p>
+                </div>
+                <div class="form-decor"></div>
+                <form class="form" method="post" action="">
+                    <div class="input-group">
+                        <label for="name">First Name</label>
+                        <input type="text" name="name" id="name" placeholder="Enter First Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="surname">Last Name</label>
+                        <input type="text" name="surname" id="surname" placeholder="Enter Last Name">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter yout Email">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <div class="select-box">
+                            <div class="selected-option">
+                                <div class="selected-flag">
+                                    <span class="flag flag-ua"></span>
+                                </div>
+                                <input ttype="tel" name="tel" id="tel" placeholder="Enter Phone Number">
+                            </div>
+                            <div class="options">
+                                <input type="text" class="search-box" placeholder="Search Country Name">
+                                <ol>
+                                    
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group message">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Enter your Message" rows="4"></textarea>
+                    </div>
+                    <div class="input-group terms">
+                        <input type="checkbox" id="terms" name="terms">
+                        <label for="terms">I agree with Terms of Use and Privacy Policy</label>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Send Message">
+                </form>
+            </div>
+        </section>
         <section id="questions" class="accordion-section">
             <div class="content-wrapper">
                 <section class="text-content">
@@ -321,6 +375,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
+    <script src="js/phone.js" defer></script>
     <script src="js/script.js" defer></script>
 </body>
 </html>

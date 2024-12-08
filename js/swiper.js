@@ -14,9 +14,12 @@ const swiper = new Swiper('.swiper', {
       dragSize: 20,
     },
 
-    slidesPerView: 1.9,
+    slidesPerView: 1.6,
     spaceBetween: 30,
     breakpoints: {
+        450: {
+          slidesPerView: 1.9,
+        },
         612: {
           slidesPerView: 3,
         },
@@ -42,9 +45,12 @@ const swiper = new Swiper('.swiper', {
       dragSize: 20,
     },
 
-    slidesPerView: 1.6,
+    slidesPerView: 1.4,
     spaceBetween: 20,
     breakpoints: {
+        450: {
+          slidesPerView: 1.6,
+        },
         612: {
           slidesPerView: 3,
         },
