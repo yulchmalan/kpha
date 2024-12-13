@@ -57,6 +57,7 @@ input {
     }
     &[type="submit"] {
         font-weight: 400;
+        cursor: pointer;
     }
     &[type="checkbox"] {
         display: none;
