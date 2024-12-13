@@ -1434,7 +1434,6 @@ header.scrolled {
   gap: 20px;
 }
 .subscription .card {
-  max-width: 650px;
   padding: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
