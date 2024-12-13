@@ -32,7 +32,7 @@
         }
         .form-decor {
             grid-area: decor;
-            background-image: url(../images/form-decor.png);
+            background-image: url(../images/form-decor.webp);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -127,7 +127,7 @@ input[type="checkbox"]:checked ~ label[for="terms"]::before {
 }
 
 .flag {
-    background: url(../images/flags.png);
+    background: url(../images/flags.webp);
     display: inline-block;
     width: 40px; height: 30px;
     border-radius: 2px;
@@ -230,7 +230,7 @@ input[type="checkbox"]:checked ~ label[for="terms"]::before {
             content: "";
             position: absolute;
             width: 20px; height: 20px;
-            background: url(../images/icons-sprite.png);
+            background: url(../images/icons-sprite.webp);
             background-position: -10px -151px;
             right: 8px;
             top: 50%;

@@ -307,7 +307,7 @@ header.scrolled {
   width: 24px;
   height: 24px;
   display: block;
-  background: url("../images/icons-sprite.png");
+  background: url("../images/icons-sprite.webp");
 }
 
 .sm-btn-light {
@@ -1049,17 +1049,17 @@ header.scrolled {
 .device-icon .icon-sm {
   width: 24px;
   height: 24px;
-  background: url("../images/devices-sprite.png");
+  background: url("../images/devices-sprite.webp");
 }
 .device-icon .icon-md {
   width: 30px;
   height: 30px;
-  background: url("../images/devices-sprite.png");
+  background: url("../images/devices-sprite.webp");
 }
 .device-icon .icon-lg {
   width: 40px;
   height: 40px;
-  background: url("../images/devices-sprite.png");
+  background: url("../images/devices-sprite.webp");
 }
 
 #phone-icon .icon-sm {
@@ -1498,7 +1498,7 @@ header.scrolled {
   gap: 50px;
   padding: 50px 30px;
   border-radius: 12px;
-  background: #0F0F0F url(../images/banner-bg.png);
+  background: #0F0F0F url(../images/banner-bg.webp);
   background-position: center;
   background-size: cover;
   border: 1px solid #262626;
@@ -1606,7 +1606,7 @@ header.scrolled {
 }
 .form-section .content-wrapper .form-decor {
   grid-area: decor;
-  background-image: url(../images/form-decor.png);
+  background-image: url(../images/form-decor.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1707,7 +1707,7 @@ input[type=checkbox]:checked ~ label[for=terms]::before {
 }
 
 .flag {
-  background: url(../images/flags.png);
+  background: url(../images/flags.webp);
   display: inline-block;
   width: 40px;
   height: 30px;
@@ -1829,7 +1829,7 @@ input[type=checkbox]:checked ~ label[for=terms]::before {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: url(../images/icons-sprite.png);
+  background: url(../images/icons-sprite.webp);
   background-position: -10px -151px;
   right: 8px;
   top: 50%;
@@ -2282,7 +2282,7 @@ p {
   display: block;
   width: 28px;
   height: 28px;
-  background: url(../images/icons-sprite.png) -10px -58px;
+  background: url(../images/icons-sprite.webp) -10px -58px;
   position: absolute;
   left: -32px;
   top: 50%;
@@ -2306,7 +2306,7 @@ p {
   padding-top: 400px;
   z-index: 1;
   min-height: 640px;
-  background: url(../images/bg.png);
+  background: url(../images/bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -2314,7 +2314,7 @@ p {
 }
 .jumbotron::after {
   content: "";
-  background: url(../images/abstract-sm.png);
+  background: url(../images/abstract-sm.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -2497,7 +2497,7 @@ p {
     margin-bottom: 150px;
   }
   .jumbotron::after {
-    background: url(../images/abstract-md.png);
+    background: url(../images/abstract-md.webp);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -2612,7 +2612,7 @@ p {
   .jumbotron::after {
     width: 470px;
     height: 470px;
-    background: url(../images/abstract.png);
+    background: url(../images/abstract.webp);
   }
   .jumbotron .content-wrapper {
     padding-bottom: 50px;

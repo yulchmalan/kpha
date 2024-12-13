@@ -139,7 +139,7 @@ p {
             display: block;
             width: 28px;
             height: 28px;
-            background: url(../images/icons-sprite.png) -10px -58px;
+            background: url(../images/icons-sprite.webp) -10px -58px;
             position: absolute;
             left: -32px;
             top: 50%;
@@ -166,13 +166,13 @@ p {
     padding-top: 400px;
     z-index: 1;
     min-height: 640px;
-    background: url(../images/bg.png);
+    background: url(../images/bg.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     &::after {
         content: "";
-        background: url(../images/abstract-sm.png);
+        background: url(../images/abstract-sm.webp);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -318,7 +318,7 @@ p {
         padding-top: 550px;
         margin-bottom: 150px;
         &::after {
-            background: url(../images/abstract-md.png);
+            background: url(../images/abstract-md.webp);
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -443,7 +443,7 @@ p {
         &::after {
             width: 470px;
             height: 470px;
-            background: url(../images/abstract.png);
+            background: url(../images/abstract.webp);
         }
         .content-wrapper {
             padding-bottom: 50px;
