@@ -9,11 +9,6 @@
         content="Main page of streaming service StreamVibe">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link
-        rel="stylesheet"
-        type="text/css"
-        href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css"
-    />
     <link rel = "icon" type = "image/png" href = "/images/logo-min.png?">
     <title>StreamVibe</title>
 </head>
@@ -27,8 +22,8 @@
                 <ul class="nav-links">
                     <li><a href="index.html" class="font-size">Головна</a></li>
                     <li><a href="moviesAndShows.html" class="font-size">Фільми & Серіали</a></li>
-                    <li><a href="support.html" class="font-size active">Підтримка</a></li>
-                    <li><a href="subscription.html" class="font-size">Підписка</a></li>
+                    <li><a href="support.html" class="font-size">Підтримка</a></li>
+                    <li><a href="subscription.html" class="font-size active">Підписка</a></li>
                 </ul>
                 <form action="#" method="get" class="search">
                     <button type="submit" class="icon">
@@ -36,7 +31,7 @@
                             <use href="images/icons.svg#search-24"/>
                         </svg>
                     </button>
-                    <input type="text" id="searchInput" name="searchInput" />
+                    <input type="text" id="searchInput" name="searchInput">
                 </form>
             </div>
             <div class="controls">
@@ -70,75 +65,101 @@
             </div>
         </nav>
     </header>
-    <main >
-        <section id="form" class="form-section">
-            <div class="content-wrapper">
-                <div class="text-content">
-                    <h1 class="h1-48">Вітаємо на нашій сторінці підтримки!</h1>
-                    <p class="font-size">Ми тут, щоб допомогти вам вирішити будь-які проблеми, які можуть виникнути з нашим продуктом.</p>
-                </div>
-                <div class="form-decor"></div>
-                <form class="form" method="post" action="">
-                    <div class="input-group">
-                        <label for="name">Ім'я</label>
-                        <input type="text" name="name" id="name" placeholder="Введіть Ваше Ім'я">
-                    </div>
-                    <div class="input-group">
-                        <label for="surname">Прізвище</label>
-                        <input type="text" name="surname" id="surname" placeholder="Введіть Ваше Прізвище">
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Введіть Ваш Email">
-                    </div>
-                    <div class="input-group">
-                        <label for="phone">Номер телефону</label>
-                        <div class="select-box">
-                            <div class="selected-option">
-                                <div class="selected-flag">
-                                    <span class="flag flag-ua"></span>
-                                </div>
-                                <input type="tel" name="tel" id="tel" placeholder="Введіть Ваш Номер Телефону">
-                            </div>
-                            <div class="options">
-                                <input type="text" class="search-box" placeholder="Пошук за Назвою">
-                                <ol>
-                                    
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-group message">
-                        <label for="message">Повідомлення</label>
-                        <textarea name="message" id="message" placeholder="Введіть Ваше Повідомлення" rows="4"></textarea>
-                    </div>
-                    <div class="input-group terms">
-                        <input type="checkbox" id="terms" name="terms">
-                        <label for="terms">Я згоден з Умовами використання та Політикою конфіденційності</label>
-                    </div>
-                    <input type="submit" class="btn btn-primary" value="Відправити">
-                </form>
-            </div>
-        </section>
-        <section id="questions" class="accordion-section">
+    <main>
+        <section id="subscription" class="subscription padding-top">
             <div class="content-wrapper">
                 <section class="text-content">
                     <div>
-                        <h2>Часто задавані питання</h2>
-                        <p class="font-size">Є питання? У нас є відповіді! Перегляньте наш розділ поширених запитань, щоб знайти відповіді на найпоширеніші запитання про StreamVibe.</p>
+                        <h2>Виберіть план, який підходить саме вам</h2>
+                        <p class="font-size">Приєднайтеся до StreamVibe і виберіть один з наших гнучких варіантів підписки, адаптованих відповідно до ваших уподобань перегляду. Будьте готові до безперервних розваг!</p>
                     </div>
-                    <a class="btn btn-primary font-size">Задати питання</a>
+                    <div class="toggle" id="toggleSub">
+                        <div class="toggle-btn font-size active" id="toggleMonthly">
+                            Щомісяця
+                        </div>
+                        <div class="toggle-btn font-size" id="toggleYearly">
+                            Щорічно
+                        </div>
+                    </div>
                 </section>
-                <section class="container">
-                    <div class="col">
-                        
-                    </div>
-                    <div class="col">
-                        
-                    </div>
-                </section>
+                <div class="container" id="pricingContainer">
+                    
+                </div>
             </div>
         </section>
+
+        <section id="subscription-table" class="table-section">
+            <div class="content-wrapper">
+                <section class="text-content">
+                    <div>
+                        <h2>Порівняйте наші плани та знайдіть правильний для себе</h2>
+                        <p class="font-size">StreamVibe пропонує три різні плани відповідно до ваших потреб: базовий, стандартний і преміальний. Порівняйте характеристики кожного плану та виберіть той, який підходить саме вам.</p>
+                    </div>
+                    <div class="toggle" id="toggleTable">
+                        <div class="toggle-btn font-size" id="toggleBasic">
+                            Basic
+                        </div>
+                        <div class="toggle-btn font-size active" id="toggleStandart">
+                            Standard
+                        </div>
+                        <div class="toggle-btn font-size" id="togglePremium">
+                            Premium
+                        </div>
+                    </div>
+                </section>
+                <div class="subscription-container">
+                    <div class="text-group">
+                        <p class="font-size heading">Ціна</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group">
+                        <p class="font-size heading">Безкоштовний період</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group full-width">
+                        <p class="font-size heading">Контент</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group full-width">
+                        <p class="font-size heading">Девайси</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group">
+                        <p class="font-size heading">Скасувати будь-коли</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group">
+                        <p class="font-size heading">HDR</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group">
+                        <p class="font-size heading">Бла-бла</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group">
+                        <p class="font-size heading">Без реклами</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group">
+                        <p class="font-size heading">Офлайн перегляд</p>
+                        <p class="font-size"></p>
+                    </div>
+                    <div class="text-group">
+                        <p class="font-size heading">Сімейний поділ</p>
+                        <p class="font-size"></p>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+
         <section class="banner"> 
             <div class="content-wrapper">
                 <section class="text-content">
@@ -241,9 +262,7 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.iconify.design/iconify-icon/2.2.0/iconify-icon.min.js"></script>
-    <script src="js/data.js" defer></script>
-    <script src="js/phone.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="js/data.js" defer></script>
 </body>
 </html>

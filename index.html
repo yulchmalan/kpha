@@ -21,10 +21,10 @@
             </a>
             <div class="nav-center">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="font-size active">Home</a></li>
-                    <li><a href="moviesAndShows.html" class="font-size">Movies & Shows</a></li>
-                    <li><a href="support.html" class="font-size">Support</a></li>
-                    <li><a href="subscription.html" class="font-size">Subscription</a></li>
+                    <li><a href="index.html" class="font-size active">Головна</a></li>
+                    <li><a href="moviesAndShows.html" class="font-size">Фільми & Серіали</a></li>
+                    <li><a href="support.html" class="font-size">Підтримка</a></li>
+                    <li><a href="subscription.html" class="font-size">Підписка</a></li>
                 </ul>
                 <form action="#" method="get" class="search">
                     <button type="submit" class="icon">
@@ -32,7 +32,7 @@
                             <use href="images/icons.svg#search-24"/>
                         </svg>
                     </button>
-                    <input type="text" id="searchInput" name="searchInput" />
+                    <input type="text" id="searchInput" name="searchInput">
                 </form>
             </div>
             <div class="controls">
@@ -67,13 +67,40 @@
         </nav>
     </header>
     <main>
+        <article class="popup">
+            <button id="close">&times;</button>
+            <form action="get">
+                <label for="email">Візьміть участь в розіграші</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+            </form>
+            <div id="timer">
+                <div>
+                    <p class="time-value big-num" id="days">0</p>
+                    <p class="time-label font-size">Дні</p>
+                </div>
+                <div>
+                    <p class="time-value big-num" id="hours">0</p>
+                    <p class="time-label font-size">Години</p>
+                </div>
+                <div>
+                    <p class="time-value big-num" id="minutes">0</p>
+                    <p class="time-label font-size">Хвилини</p>
+                </div>
+                <div>
+                    <p class="time-value big-num" id="seconds">0</p>
+                    <p class="time-label font-size">Секунди</p>
+                </div>
+            </div>
+            <p class="font-size center">до кінця акції!</p>
+        </article>
+        <div id="overlay"></div>
         <section id="jumbotron" class="jumbotron">
             <div class="content-wrapper">
                 <section class="text-content">
-                    <h1 class="h1-58">The Best Streaming Experience</h1>
-                    <p class="font-size">StreamVibe is the best streaming experience for watching your favorite movies and shows on demand, anytime, anywhere. <span class="md-screen">With StreamVibe, you can enjoy a wide variety of content, including the latest blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlists, so you can easily find the content you want to watch.</span></p>
+                    <h1 class="h1-58">Найкращий стримінговий досвід</h1>
+                    <p class="font-size">StreamVibe — це найкращий досвід потокового передавання для перегляду ваших улюблених фільмів і шоу за запитом, будь-коли та будь-де. <span class="md-screen">За допомогою StreamVibe ви можете насолоджуватися різноманітним контентом, включаючи останні блокбастери, класичні фільми, популярні телевізійні шоу тощо. Ви також можете створювати власні списки перегляду, щоб легко знаходити вміст, який хочете переглянути.</span></p>
                 </section>
-                <a class="btn btn-primary btn-icon"><span class="font-size">Start Watching Now</span></a>
+                <a class="btn btn-primary btn-icon"><span class="font-size">Розпочати зараз</span></a>
             </div>
         </section>
         <section id="categories" class="swiper-section">
@@ -81,8 +108,8 @@
                 <div class="swiper">
                     <section class="swiper-top text-content">
                         <div>
-                            <h2>Explore our wide variety of categories</h2>
-                            <p class="font-size">Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new</p>
+                            <h2>Ознайомтеся з нашою різноманітністю категорій</h2>
+                            <p class="font-size">Незалежно від того, чи шукаєте ви комедію, щоб змусити вас сміятися, драму, щоб змусити вас задуматися, чи документальний фільм, щоб дізнатися щось нове</p>
                         </div>
                         <div class="controls">
                             <div class="swiper-button-prev sm-btn sm-btn-light"></div>
@@ -101,7 +128,7 @@
                                     <div class="item"><img src="images/posters/action3.webp" alt="Poster of Action Movie"></div>
                                     <div class="item"><img src="images/posters/action4.webp" alt="Poster of Action Movie"></div>
                                 </div>
-                                <a href="#">
+                                <a href="movie.html">
                                     <section class="caption">
                                         <h4>Action</h4>
                                         <svg height="20" width="20" class="icon-sm">
@@ -293,8 +320,8 @@
         <section id="devices" class="devices">
             <div class="content-wrapper">
                 <section class="text-content">
-                    <h2>We Provide you streaming experience across various devices.</h2>
-                    <p class="font-size">With StreamVibe, you can enjoy your favorite movies and TV shows anytime, anywhere. <span class="md-screen">Our platform is designed to be compatible with a wide range of devices, ensuring that you never miss a moment of entertainment.</span></p>
+                    <h2>Ми пропонуємо вам потокове передавання на різних пристроях.</h2>
+                    <p class="font-size">За допомогою StreamVibe ви можете насолоджуватися улюбленими фільмами та телешоу в будь-який час і в будь-якому місці. <span class="md-screen">Наша платформа розроблена таким чином, щоб бути сумісною з широким спектром пристроїв, гарантуючи, що ви ніколи не пропустите момент розваги.</span></p>
                 </section>
                 <div class="container">
                     <div class="card">
@@ -304,9 +331,9 @@
                                 <div class="icon-md"></div>
                                 <div class="icon-lg"></div>
                             </div>
-                            <h3>Smartphones</h3>
+                            <h3>Смартфони</h3>
                         </div>
-                        <p class="font-size">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+                        <p class="font-size">StreamVibe оптимізовано як для смартфонів Android, так і для iOS. Завантажте нашу програму з Google Play Store або Apple App Store</p>
                     </div>
                     <div class="card">
                         <div class="caption">
@@ -315,9 +342,9 @@
                                 <div class="icon-md"></div>
                                 <div class="icon-lg"></div>
                             </div>
-                            <h3>Tablets</h3>
+                            <h3>Планшети</h3>
                         </div>
-                        <p class="font-size">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+                        <p class="font-size">StreamVibe оптимізовано як для смартфонів Android, так і для iOS. Завантажте нашу програму з Google Play Store або Apple App Store</p>
                     </div>
                     <div class="card">
                         <div class="caption">
@@ -328,7 +355,7 @@
                             </div>
                             <h3>Smart TV</h3>
                         </div>
-                        <p class="font-size">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+                        <p class="font-size">StreamVibe оптимізовано як для смартфонів Android, так і для iOS. Завантажте нашу програму з Google Play Store або Apple App Store</p>
                     </div>
                     <div class="card">
                         <div class="caption">
@@ -337,9 +364,9 @@
                                 <div class="icon-md"></div>
                                 <div class="icon-lg"></div>
                             </div>
-                            <h3>Laptops</h3>
+                            <h3>Ноутбуки</h3>
                         </div>
-                        <p class="font-size">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+                        <p class="font-size">StreamVibe оптимізовано як для смартфонів Android, так і для iOS. Завантажте нашу програму з Google Play Store або Apple App Store</p>
                     </div>
                     <div class="card">
                         <div class="caption">
@@ -348,9 +375,9 @@
                                 <div class="icon-md"></div>
                                 <div class="icon-lg"></div>
                             </div>
-                            <h3>Gaming Consoles</h3>
+                            <h3>Ігрові консолі</h3>
                         </div>
-                        <p class="font-size">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+                        <p class="font-size">StreamVibe оптимізовано як для смартфонів Android, так і для iOS. Завантажте нашу програму з Google Play Store або Apple App Store</p>
                     </div>
                     <div class="card">
                         <div class="caption">
@@ -359,9 +386,9 @@
                                 <div class="icon-md"></div>
                                 <div class="icon-lg"></div>
                             </div>
-                            <h3>VR Headsets</h3>
+                            <h3>VR Гарнітури</h3>
                         </div>
-                        <p class="font-size">StreamVibe is optimized for both Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store</p>
+                        <p class="font-size">StreamVibe оптимізовано як для смартфонів Android, так і для iOS. Завантажте нашу програму з Google Play Store або Apple App Store</p>
                     </div>
                 </div>
             </div>
@@ -370,151 +397,17 @@
             <div class="content-wrapper">
                 <section class="text-content">
                     <div>
-                        <h2>Frequently Asked Questions</h2>
-                        <p class="font-size">Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about StreamVibe.</p>
+                        <h2>Часто задавані питання</h2>
+                        <p class="font-size">Є питання? У нас є відповіді! Перегляньте наш розділ поширених запитань, щоб знайти відповіді на найпоширеніші запитання про StreamVibe.</p>
                     </div>
-                    <a class="btn btn-primary font-size">Ask a Question</a>
+                    <a class="btn btn-primary font-size">Задати питання</a>
                 </section>
                 <section class="container">
                     <div class="col">
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>What is StreamVibe?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>How much does StreamVibe cost?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>What content is available on StreamVibe?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>How can I watch StreamVibe?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
+                        
                     </div>
                     <div class="col">
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>How do I sign up for StreamVibe?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>What is the StreamVibe free trial?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>How do I contact StreamVibe customer support?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
-                        <article class="accordion-item">
-                            <section class="question">
-                                <h3>What are the StreamVibe payment methods?</h3>
-                                <svg height="30" width="30" class="icon-lg icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="30" width="30" class="icon-md icon">
-                                    <use href="images/icons.svg#plus-30"/>
-                                </svg>
-                                <svg height="24" width="24" class="icon-sm icon">
-                                    <use href="images/icons.svg#plus-24"/>
-                                </svg>
-                            </section>
-                            <section class="answer">
-                                <p class="font-size">StreamVibe is a streaming service that allows you to watch movies and shows on demand.</p>
-                            </section>
-                        </article>
+                       
                     </div>
                 </section>
             </div>
@@ -523,74 +416,30 @@
             <div class="content-wrapper">
                 <section class="text-content">
                     <div>
-                        <h2>Choose the plan that's right for you</h2>
-                        <p class="font-size">Join StreamVibe and select from our flexible subscription options tailored to suit your viewing preferences. Get ready for non-stop entertainment!</p>
+                        <h2>Виберіть план, який підходить саме вам</h2>
+                        <p class="font-size">Приєднайтеся до StreamVibe і виберіть один з наших гнучких варіантів підписки, адаптованих відповідно до ваших уподобань перегляду. Будьте готові до безперервних розваг!</p>
                     </div>
                     <div class="toggle" id="toggleSub">
                         <div class="toggle-btn font-size active" id="toggleMonthly">
-                            Monthly
+                            Щомісяця
                         </div>
                         <div class="toggle-btn font-size" id="toggleYearly">
-                            Yearly
+                            Щорічно
                         </div>
                     </div>
                 </section>
                 <div class="container" id="pricingContainer">
-                    <div class="card">
-                        <div class="text-content">
-                            <h3>Basic Plan</h3>
-                            <p class="font-size">
-                                Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles.
-                            </p>
-                        </div>
-                        <p class="price font-size">
-                            <span class="big-num">$9.99</span><span class="duration">/month</span>
-                        </p>
-                        <div class="controls">
-                            <a class="btn btn-secondary font-size">Start Free Trial</a>
-                            <a class="btn btn-primary font-size">Choose Plan</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="text-content">
-                            <h3>Standard Plan</h3>
-                            <p class="font-size">
-                                Access to a wider selection of movies and shows, including most new releases and exclusive content
-                            </p>
-                        </div>
-                        <p class="price font-size">
-                            <span class="big-num">$12.99</span><span class="duration">/month</span>
-                        </p>
-                        <div class="controls">
-                            <a class="btn btn-secondary font-size">Start Free Trial</a>
-                            <a class="btn btn-primary font-size">Choose Plan</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="text-content">
-                            <h3>Premium Plan</h3>
-                            <p class="font-size">
-                                Access to the widest selection of movies and shows, including all new releases and Offline Viewing
-                            </p>
-                        </div>
-                        <p class="price font-size">
-                            <span class="big-num">$14.99</span><span class="duration">/month</span>
-                        </p>
-                        <div class="controls">
-                            <a class="btn btn-secondary font-size">Start Free Trial</a>
-                            <a class="btn btn-primary font-size">Choose Plan</a>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
         <section class="banner"> 
             <div class="content-wrapper">
                 <section class="text-content">
-                    <h2>Start your free trial today!</h2>
-                    <p class="font-size">This is a clear and concise call to action that encourages users to sign up for a free trial of StreamVibe.</p>
+                    <h2>Розпочніть безкоштовну пробну версію вже сьогодні!</h2>
+                    <p class="font-size">Це чіткий і стислий заклик до дії, який заохочує користувачів підписатися на безкоштовну пробну версію StreamVibe.</p>
                 </section>
-                <a class="btn btn-primary font-size">Start a Free Trail</a>
+                <a class="btn btn-primary font-size">Розпочати безкоштовно</a>
             </div>
         </section>
     </main>
@@ -598,47 +447,47 @@
         <div class="content-wrapper">
             <div class="top-footer">
                 <div class="col">
-                    <h5>Home</h5>
+                    <h5>Головна</h5>
                     <ul>
-                        <li class="font-size"><a href="">Categories</a></li>
-                        <li class="font-size"><a href="">Devices</a></li>
-                        <li class="font-size"><a href="">Pricing</a></li>
-                        <li class="font-size"><a href="">FAQ</a></li>
+                        <li class="font-size"><a href="categories.html">Категорії</a></li>
+                        <li class="font-size"><a href="#devices">Пристрої</a></li>
+                        <li class="font-size"><a href="#subscription">Ціни</a></li>
+                        <li class="font-size"><a href="#questions">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h5>Movies</h5>
+                    <h5>Фільми</h5>
                     <ul>
-                        <li class="font-size"><a href="">Gernes</a></li>
-                        <li class="font-size"><a href="">Trending</a></li>
-                        <li class="font-size"><a href="">New Release</a></li>
-                        <li class="font-size"><a href="">Popular</a></li>
+                        <li class="font-size"><a href="#categories">Жанри</a></li>
+                        <li class="font-size"><a href="categories.html">Трендове</a></li>
+                        <li class="font-size"><a href="categories.html">Прем'єри</a></li>
+                        <li class="font-size"><a href="categories.html">Популярне</a></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h5>Shows</h5>
+                    <h5>Серіали</h5>
                     <ul>
-                        <li class="font-size"><a href="">Gernes</a></li>
-                        <li class="font-size"><a href="">Trending</a></li>
-                        <li class="font-size"><a href="">New Release</a></li>
-                        <li class="font-size"><a href="">Popular</a></li>
+                        <li class="font-size"><a href="#categories">Жанри</a></li>
+                        <li class="font-size"><a href="categories.html">Трендове</a></li>
+                        <li class="font-size"><a href="categories.html">Прем'єри</a></li>
+                        <li class="font-size"><a href="categories.html">Популярне</a></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h5>Suppost</h5>
+                    <h5>Підтримка</h5>
                     <ul>
-                        <li class="font-size"><a href="">Contact Us</a></li>
+                        <li class="font-size"><a href="support.html">З'єднатись з нами</a></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h5>Subscription</h5>
+                    <h5>Підписка</h5>
                     <ul>
-                        <li class="font-size"><a href="">Plans</a></li>
-                        <li class="font-size"><a href="">Features</a></li>
+                        <li class="font-size"><a href="#subscription">Плани</a></li>
+                        <li class="font-size"><a href="subscription.html">Переваги</a></li>
                     </ul>
                 </div>
                 <div class="col">
-                    <h5>Connect With Us</h5>
+                    <h5>З'єднатися з нами</h5>
                     <div class="container">
                         <a href="" class="btn-link">
                             <svg height="24" width="24" class="icon-lg icon">
@@ -687,6 +536,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/popup.js" defer></script>
+    <script src="js/data.js" defer></script>
     <script src="js/swiper.js" defer></script>
     <script src="js/script.js" defer></script>
 </body>

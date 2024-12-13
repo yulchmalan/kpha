@@ -1,11 +1,11 @@
 const countries = [
-    { name: "Canada", code: "CA", phone: 1 },
-    { name: "Czech Republic", code: "CZ", phone: 420 },
-    { name: "France", code: "FR", phone: 33 },
-    { name: "Poland", code: "PL", phone: 48 },
-    { name: "Ukraine", code: "UA", phone: 380 },
-    { name: "United Kingdom", code: "GB", phone: 44 },
-    { name: "United States", code: "US", phone: 1 },
+    { name: "Канада", code: "CA", phone: 1 },
+    { name: "Чехія", code: "CZ", phone: 420 },
+    { name: "Франція", code: "FR", phone: 33 },
+    { name: "Польща", code: "PL", phone: 48 },
+    { name: "Україна", code: "UA", phone: 380 },
+    { name: "Велика Британія", code: "GB", phone: 44 },
+    { name: "США", code: "US", phone: 1 },
 ],
 
 select_box = document.querySelector('.options'),

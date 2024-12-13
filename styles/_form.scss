@@ -4,7 +4,7 @@
     padding-top: 140px;
     .content-wrapper {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: auto;
         grid-template-rows: auto auto auto;
         row-gap: 40px;
         column-gap: 80px;
@@ -102,6 +102,7 @@ label {
             line-height: 28px;
             text-align: center;
             font-size: 40px;
+            cursor: pointer;
         }
     }
 }
@@ -117,7 +118,7 @@ input[type="checkbox"]:checked ~ label[for="terms"]::before {
     }
     display: flex;
     gap: 12px;
-    &:not(.message) {
+    &:not(.message):not(.terms) {
         width: 100%;
     }
     &.message {
@@ -267,7 +268,7 @@ input[type="checkbox"]:checked ~ label[for="terms"]::before {
         }
     }
     .input-group {
-        &:not(.message) {
+        &:not(.message):not(.terms) {
             width: calc(50% - 25px);
         }
     }

@@ -54,7 +54,7 @@
         gap: 20px;
     }
     .card {
-        width: 100%;
+        // width: 100%;
         max-width: 650px;
         padding: 24px;
         display: flex;
@@ -120,10 +120,12 @@
     .subscription {
         .container {
             flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
             align-items: stretch;
         }
         .card {
-            width: calc(33% - 27px);
+            // width: calc(33% - 27px);
             padding: 40px;
             gap: 40px;
         }
@@ -146,7 +148,7 @@
         .card {
             padding: 50px;
             gap: 50px;
-            max-width: calc(33% - 20px);
+            // max-width: calc(33% - 20px);
         }
     }
     .controls {
