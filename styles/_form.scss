@@ -162,6 +162,7 @@ input[type="checkbox"]:checked ~ label[for="terms"]::before {
 }
 
 .select-box {
+    user-select: none;
     position: relative;
     input {
         width: 100%;
