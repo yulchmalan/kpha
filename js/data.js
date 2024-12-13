@@ -117,7 +117,7 @@ async function loadSubscriptionPlans() {
         card.innerHTML = `
             <div class="text-content">
             <h3>${plan.name} План</h3>
-            <p class="font-size">${plan.features.Content}</p>
+            <p class="font-size">${plan.features.Контент}</p>
             </div>
             <p class="price font-size">
             <span class="big-num">${plan.priceMonth.split('/')[0]}</span>
